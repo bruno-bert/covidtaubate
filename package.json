@@ -1,7 +1,8 @@
 {
-  "name": "react-avancado-boilerplate",
+  "name": "covid-taubate",
   "version": "1.0.0",
   "private": true,
+  "license": "Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

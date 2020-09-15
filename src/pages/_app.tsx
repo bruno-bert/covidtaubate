@@ -9,7 +9,6 @@ import axios from 'axios';
 import GlobalStyles from 'styles/global'
 
 
-axios.defaults.baseURL = process.env.NEXT_PUBLIC_API_BASEURL;
 
 function App({ Component, pageProps }: AppProps) {
   return (
@@ -17,17 +16,17 @@ function App({ Component, pageProps }: AppProps) {
      <ReactNotification />
   
       <Head>
-        <title>Lucky In Live</title>
+        <title>Covid taubaté</title>
         <link rel="shortcut icon" href="/img/icon-512.png" />
         <link rel="apple-touch-icon" href="/img/icon-512.png" />
         <link rel="manifest" href="/manifest.json" />
         <meta
           name="description"
-          content="Easily pick a random participant during youtube live transmission"
+          content="Números do Covid em Taubaté"
         />
          <meta
           name="description"
-          content="Facilmente selecione um participante da live no youtube"
+          content="Números atualizados do Covid em Taubaté"
         />
       </Head>
     

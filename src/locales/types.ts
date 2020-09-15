@@ -1,4 +1,4 @@
-export type HomeLanguageType = {
+export type LanguageType = {
   title: string,
   description: string,
   locale: string,

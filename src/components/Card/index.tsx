@@ -1,14 +1,12 @@
 import * as S from './styles'
 
 export type CardProps = {
-  children?: HTMLCollection | string,
-  description: string
+  children?: React.ReactNode | HTMLCollection | string
 }
 
-const Card = ({description, children}: CardProps) => (
+const Card = ({ children}: CardProps) => (
   <S.Wrapper>
-    <h3>{description}</h3>
-    <p>{children}</p>
+    {children}
   </S.Wrapper>
 )
 

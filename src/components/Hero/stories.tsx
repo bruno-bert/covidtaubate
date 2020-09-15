@@ -3,7 +3,11 @@ import Hero from '.'
 
 export default {
   title: 'Hero',
-  component: Hero
+  component: Hero,
+  args: {
+    lang: {},
+    data: {}
+  }
 } as Meta
 
-export const Default: Story = () => <Hero />
+export const Default: Story = (args) => <Hero data={args.data} lang={args.lang} {...args} />
