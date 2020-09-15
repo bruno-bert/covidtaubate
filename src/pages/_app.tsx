@@ -9,7 +9,6 @@ import axios from 'axios';
 import GlobalStyles from 'styles/global'
 
 
-axios.defaults.baseURL = process.env.NEXT_PUBLIC_API_BASEURL;
 
 function App({ Component, pageProps }: AppProps) {
   return (

@@ -1,49 +1,40 @@
 import React from "react"
 
-import Main from 'components/Main'
+import Layout from "components/Layout"
 import Hero from 'components/Hero'
 import { GetStaticProps } from 'next'
-import { HomeLanguageType } from "locales/types"
-import {NextSeo} from "next-seo"
+import { LanguageType } from "locales/types"
+import axios from 'axios';
+import { BrazilIOResponseApi } from "types"
 
 export type HomeProps = {
-  lang: HomeLanguageType
+  lang: LanguageType,
+  data: BrazilIOResponseApi
 }
 
-
-const Home = ( {lang}: HomeProps ) => {
-
+const Home = ( {lang, data}: HomeProps ) => {
   
   return (
-    <>
+    <Layout lang={lang}>
       
-      <NextSeo
-        title={lang.title}
-        description={lang.description}
-        canonical="https://luckynlive.com/"
-        openGraph={{
-          url: 'https://luckynlive.com/',
-          title: `LuckynLive - ${lang.title}`,
-          description:
-           lang.description,
-          images: [{ url: 'https://luckyinlive.com/img/cover.png' }],
-          site_name: 'Lucky In Live',
-          locale: lang.locale
-        }}
-      />
-
-      <Hero >
-        <Main lang={lang} />
-      </Hero>
-    </>
+      <Hero lang={lang} data={data} />
+     
+    </Layout>
   )
  
 }
 
-
 export const getStaticProps: GetStaticProps = async () => {
+  /** get language data */
   const lang = require(`../locales/pt.json`)
-  return  { props: { lang } }
+
+  /** get covid data */
+  const response  = await axios.get(process.env.API_URL as string)
+  const data: BrazilIOResponseApi = response.data.results[0]
+
+  
+  return  { props: { lang, data } }
+  
 }
 
 export default Home

@@ -2,26 +2,29 @@ import styled from 'styled-components'
 
 export const Wrapper = styled.div`
 
-border-radius: 10px;
 
-width: 90%;
-margin: 3rem auto;
+width: 200px;
+margin: 3rem 2rem;
 padding: 2rem;
 
-background: #2b323b;
-box-shadow:  20px 20px 60px #252b32, 
-             -20px -20px 60px #313a44;
+
+border-radius: 9px;
+background: #EFFFFA;
+box-shadow:  7px 7px 14px #e3f2ee, 
+             -7px -7px 14px #fbffff;
+
 
 & > * {
-    color: #fefefe;
+    color: black;
 }
 
-h3{
-    font-size: 1.6rem;   
+.title{
+    font-size: 1.6rem;  
+    height: 50px; 
 
 }
 
-p{
+.value{
     margin-top: 2rem;
     font-size: 2.5rem;
 }
