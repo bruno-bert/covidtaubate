@@ -18,7 +18,7 @@ const Hero = ({lang, data}: HeroProps) => {
       <S.Wrapper>
       
       <S.Title>Números do Corona Vírus em Taubaté</S.Title>
-      <S.Description>Occaecat eiusmod Lorem ut magna aute voluptate cupidatat commodo aute et quis dolore excepteur. 
+      <S.Description>Situação atual do corona vírus em Taubaté. 
         .</S.Description>
 
       {
