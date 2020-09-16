@@ -72,6 +72,10 @@ const GlobalStyles = createGlobalStyle`
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+
+    @media (max-width: 600px){
+      background-position-x: left;
+    }
     
   
   }
